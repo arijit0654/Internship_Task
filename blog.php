@@ -17,6 +17,9 @@ $result = $conn->query($sql);
 <body>
     <h2>All Blog Posts</h2>
 
+    <p>
+    <a href="post_create.php">➕ Create New Post</a> |
+</p>
     <?php if ($result->num_rows > 0): ?>
         <?php while ($row = $result->fetch_assoc()): ?>
             <div style="border:1px solid #ccc; padding:10px; margin:10px 0;">
@@ -39,6 +42,9 @@ $result = $conn->query($sql);
         <p>No posts found.</p>
     <?php endif; ?>
 
-    <p><a href="dashboard.php">← Back to Dashboard</a></p>
+    <p>
+    <a href="dashboard.php">← Back to Dashboard</a>
+</p>
+
 </body>
 </html>
